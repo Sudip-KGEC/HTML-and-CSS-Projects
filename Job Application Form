@@ -1,0 +1,193 @@
+<-------------------------HTML--------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+     
+       <div class="input_contaner">
+
+       <h1>Job Application <span class="title_small">(Web)</span></h1>
+         <form action="">
+            <div class="form_container">
+
+            <div class="form_control">
+                <label for="fastname">Fast Name</label>
+                <input type="text" name="fastname" id="fastname" placeholder="Enter first name....">
+            </div>
+            <div  class="form_control">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Enter first name.....">
+            </div>
+            <div  class="form_control">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter email.....">
+            </div>
+            <div  class="form_control">
+                <label for="job_role">Job Role</label>
+                <select name="job_role" id="job_role">
+                    <option value="">Select Job Role</option>
+                    <option value="Frontend">Front-End Developer</option>
+                    <option value="backend">Back-End Developer</option>
+                    <option value="Mern-stack">MERN Stack Developer</option>
+                </select>
+            </div>
+
+            <div  class="textarea">
+                <label for="address">Address </label>
+                <textarea name="address" id="Address" placeholder="Enter eddress......." rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="form_control">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" placeholder="Enter city....">
+            </div>
+            <div class="form_control">
+                <label for="pincode">Pin Code</label>
+                <input type="number" name="pincode" id="pincode" placeholder="Enter pincode....">
+            </div>
+    
+            <div class="form_control">
+                <label for="date">Date</label>
+                <input value="2024-07-20"  type="date" name="date" id="date" >
+            </div>
+    
+            <div class="form_control">
+                <label for="upload">Upload Your Resume</label>
+                <input type="file" name="upload" id="upload" placeholder="Enter pincode....">
+            </div>
+    
+        </div>
+
+        
+        <div class="but_container">
+            <button type="submit">Apply Now</button>
+        </div>
+         </form>
+       </div>
+     </div>
+     
+    <p class="footer"> &copy; 2024 [sudip_KGEC] </p>
+</body>
+</html>
+
+
+
+
+<-- ---------------------------------CSS ------------------------------>
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(209, 209, 209);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto; 
+}
+
+.input_contaner {
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgba(248, 19, 19, 0.3);
+    border-radius: 10px;
+}
+
+.title_small{
+    font-size: 16px;
+}
+
+.form_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(200px,1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.form_control {
+    display:flex;
+    flex-direction: column;
+    
+}
+label{
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+input , select , textarea {
+    padding: 7px;
+    border: transparent 1px solid #cccccc9d;
+    border-radius: 4px;
+    font-size: 15px;
+
+}
+
+input:focus {
+    outline-color: rgba(245, 0, 0, 0.959);
+}
+
+.textarea {
+    grid-column: 1/span 2;
+    
+}
+.textarea textarea {
+    width: 100%;
+}
+
+.but_container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+button {
+    background-color: rgb(255, 7, 7);
+    color: rgb(255, 255, 255);
+    padding: 7px 15px;
+    border: transparent 2px rgb(231, 231, 231);
+    box-shadow: 4px 3px 0.5;
+    border-radius: 8px;
+    transition: 0.3s ease-in 0.1s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(252, 127, 25);
+    color: black; 
+}
+
+@media  screen and (max-width:460px) {
+    .textarea {
+        grid-column: 1/span 1;
+        
+    }
+
+    body {
+        padding: 20px;
+        
+    }
+    .container {
+        background-size: cover;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    text-align:flex-end;
+
+}
